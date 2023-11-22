@@ -1,0 +1,392 @@
+* {
+	margin:  0;
+	padding:  0;
+	box-sizing:  border-box;
+	color: var(--negro);
+	transition: color 1s ease, background 1s ease;
+}
+
+:root {
+	--celeste:  #a4e1f3;
+	--blanco: #fff;
+	--negro: #000;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	--hover: #fff;
+}
+
+/*Header*/
+.header {
+    height: 190px;	
+	display: flex;
+    text-align:  center;
+    justify-content: center;
+	background:  url("../ojo.png") no-repeat;
+	background-attachment: fixed;
+	background-position: top center;
+	align-items: center;
+	color: var(--celeste);
+}
+
+.header:before {
+	content: "";
+	background-color: var(--negro);
+	height: 190px;
+	width: 100%;
+	position: absolute;
+	opacity: .3;
+}
+
+
+/*Nav*/
+.nav {
+	display: flex;
+	width: 100%;
+	position:  sticky;
+	top:  0;
+	background-color: var(--blanco);
+	z-index: 1;
+	border-bottom: 3px solid var(--negro); 
+}
+
+
+
+
+.menu__ajustes {	
+	position: absolute;
+	justify-content: space-evenly;
+    top: -9999px;
+    left: -9999px;   
+
+    width: 100%;
+	height: calc(100vh - 55px);
+	margin-top: 55px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+	background-color: var(--celeste);
+	text-align: center;
+}
+
+.menu__ajustes li:hover a{
+  background-position: 100%;
+  transform: translateX(16px);
+}
+
+.menu__ajustes li a {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	margin: 30px 0;
+	width: 100%;
+	color: var(--negro);
+	text-decoration: none;
+	background-color: var(--blanco);
+}
+
+.menu__ajustes li:hover {
+	cursor: pointer;
+}
+
+li a {
+	cursor: pointer;
+}
+
+/*Menu*/
+.menu__desktop {
+	position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.btn__menu {
+	background-color: var(--celeste);
+	color: var(--blanco);
+	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: all .5s ease-in-out;
+    border: none;
+}
+
+.menu__responsive {
+	position: absolute;
+	justify-content: space-evenly;
+    top: -9999px;
+    left: -9999px;
+
+    width: 100%;
+	height: calc(100vh - 55px);
+	margin-top: 55px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+    align-items: center;
+	display: flex;
+	background-color: var(--celeste);
+	text-align: center;
+}
+
+
+.menu__responsive li a {
+	display: block;
+	font-size: 30px;
+	color: var(--negro);
+	text-decoration: none;
+	background-color: var(--blanco);
+}
+
+.menu__responsive li:hover {
+	cursor: pointer;
+}
+
+
+.menu__desktop li a {
+	text-decoration: none;
+	color: var(--negro);
+	font-size: 20px;
+}
+
+
+
+.nav li a {
+display: flex;
+padding: 10px 15px;
+height: 66px;
+align-items: center;
+justify-content: center;
+}
+
+.nav li a:hover{
+background-color: var(--hover);
+}
+
+.nav li ul {
+	background-color: var(--celeste);
+	border: 1px solid var(--negro);
+	border-top: none;
+	top: 66px;
+    position: absolute;
+    display: none;
+}
+
+.nav li:hover > ul {
+display: block;
+}
+
+.contenedor__temas {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+
+.switch {
+  background: var(--switch);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: var(--blanco);
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.active {
+  background: orange;
+  color: var(--negro);
+}
+
+.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+}
+
+
+
+
+section h2 {
+	padding: 20px 0 10px 0; 
+	font-size: 30px;
+}
+
+
+li {
+	display:  inline-block;
+	width:  100%;
+}
+
+li:hover a{
+  background-position: 100%;
+}
+
+
+
+
+article li {
+	list-style-type: square;
+	padding: 3px 0 3px 0;
+}
+
+.show {
+	position: absolute;
+	justify-content: space-evenly;
+    top: 0;
+    left: 0;
+}
+
+
+
+#Ayuda, #leyesSobreLaCeguera, #tiposDeCeguera, #causasDeLaCeguera, #queEsLaCeguera {
+	text-align: center;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 50px;
+	background-color: var(--celeste);
+}
+
+p {
+	font-size: 20px;
+}
+
+.header, .main, .footer {
+	padding: 20px;
+}
+
+.header, .main {
+	background-color: var(--blanco);
+}
+
+/*fondo del scroll*/
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: var(--blanco);
+}
+
+/*bara del scroll*/
+body::-webkit-scrollbar-thumb {
+	background-color: var(--celeste);
+	border-radius: 5px;
+	border-right: 2px solid var(--blanco);
+}
+
+
+.informacion {
+	font-size: 40px;
+}
+
+nav h2 {
+	font-size: 30px;
+	padding: 0 15px 0 30px;
+}
+
+.main {/*
+	flex-basis: 400px;
+	flex-grow: 2;
+	flex-shrink: 0;*/
+	border: 3px solid var(--negro);
+}
+
+
+.footer {
+	background-color: var(--celeste);
+	border: 3px solid var(--negro);
+	display: flex;
+	justify-content: center;
+
+}
+
+.footer i {
+	margin: 0 10px 0 10px;
+	font-size: 30px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+h1 {
+	position: relative;
+	color: var(--celeste);
+}
+
+#texto {
+	position: absolute;
+	left: -9999999999999px;
+	height: -9999999999999px;
+}
+
+@media screen and (min-width: 700px) {
+	.menu__ajustes {
+		left: -9999999px;
+		top: -9999999px;
+	}
+	
+	.menu__responsive, .logo, .btn__menu, .pi{
+		position: absolute;
+        top: -9999px;
+        left: -9999px;
+	}
+
+	.menu__desktop {
+		width: 100%;
+		height: 66px;
+	    text-align: center;
+	    background-color:  var(--celeste);
+	    position:  sticky;
+	    top:  0;
+        display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.content {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.footer {
+		flex-basis: 100%;
+	}
+
+	.header {
+		flex-basis: 100%;
+		height: 190px;
+	}
+}
